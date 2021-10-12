@@ -1,0 +1,4 @@
+#Tue Oct 12 14:19:49 PDT 2021
+base.0=/Users/apple/Downloads/16digitlatest/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
