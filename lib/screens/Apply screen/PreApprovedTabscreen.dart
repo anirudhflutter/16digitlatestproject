@@ -139,7 +139,8 @@ class SelectCard extends StatelessWidget {
                                   ),
                                 ]
                             ),
-                          ),Container(
+                          ),
+                          Container(
                             alignment: Alignment.bottomRight,
                             margin:EdgeInsets.fromLTRB(7.w, 0, 1.w, 7.w),
                             child: Text(choice.tc,

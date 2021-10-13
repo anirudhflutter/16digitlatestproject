@@ -54,7 +54,7 @@ class _ProfileScreenPageState extends State<ProfileScreen>
                                 spreadRadius: 3,
                                 blurRadius: 10,
                                 offset: Offset(-1, -1),
-                                color: Colors.white)
+                                color: Colors.grey)
                           ]),
                       child: Neumorphic(
                           style: NeumorphicStyle(
@@ -82,7 +82,7 @@ class _ProfileScreenPageState extends State<ProfileScreen>
                               spreadRadius: 3,
                               blurRadius: 10,
                               offset: Offset(-1, -1),
-                              color: Colors.white)
+                              color: Colors.grey)
                         ]),
                     child: Container(
                       child: Neumorphic(
@@ -113,11 +113,14 @@ class _ProfileScreenPageState extends State<ProfileScreen>
                         fontSize: 13.sp,
                         fontWeight: FontWeight.w600)),
               ),
+              SizedBox(
+                height: 40,
+              ),
               Column(
                 children: <Widget>[
                   new Container(
                     margin: EdgeInsets.fromLTRB(5.w, 0, 5.w, 1.h),
-                    height: 33.h,
+                    height: 37.5.h,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         // color: Colors.white,
@@ -140,7 +143,7 @@ class _ProfileScreenPageState extends State<ProfileScreen>
                           intensity: 10,
                           shadowLightColor: Colors.white,
                           lightSource: LightSource.topLeft,
-                          color: Colors.white),
+                          color: Colors.grey),
                       child: Stack(
                         children: [
                           Container(
@@ -165,7 +168,7 @@ class _ProfileScreenPageState extends State<ProfileScreen>
                                     tag: 'profile',
                                     child: Image.asset(
                                       'assets/images/profile.png',
-                                      height: 10.h,
+                                      height: 13.h,
                                     ),
                                   )),
                               Container(
@@ -188,7 +191,7 @@ class _ProfileScreenPageState extends State<ProfileScreen>
                                             color: Colors.blue[800],
                                             fontFamily: 'Mukta',
                                             fontSize: 13.sp,
-                                            fontWeight: FontWeight.w500)),
+                                            fontWeight: FontWeight.bold)),
                                   ),
                                   Container(
                                     margin:
@@ -211,7 +214,7 @@ class _ProfileScreenPageState extends State<ProfileScreen>
                                             color: Colors.blue[800],
                                             fontFamily: 'Mukta',
                                             fontSize: 13.sp,
-                                            fontWeight: FontWeight.w500)),
+                                            fontWeight: FontWeight.bold)),
                                   ),
                                   Container(
                                     margin: EdgeInsets.fromLTRB(0, 0, 7.w, 0),
@@ -227,36 +230,48 @@ class _ProfileScreenPageState extends State<ProfileScreen>
                               Divider(
                                 color: Colors.black,
                               ),
-                              SizedBox(
-                                height: 1.h,
-                              ),
-                              Align(
-                                alignment: Alignment.topCenter,
-                                child: new TabBar(
-                                  controller: _controller,
-                                  onTap: (index) {
-                                    setState(() {});
-                                  },
-                                  indicatorColor: Colors.black,
-                                  indicatorWeight: 1,
-                                  indicatorSize: TabBarIndicatorSize.label,
-                                  labelColor: Colors.blue[800],
-                                  unselectedLabelColor: Colors.grey[600],
-                                  tabs: [
-                                    Text(
-                                      "General",
-                                      style: TextStyle(
-                                          fontFamily: 'Mukta',
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w700),
+                              // SizedBox(
+                              //   height: 1.h,
+                              // ),
+                              Stack(
+                                children: [
+                                  Align(
+                                    alignment: Alignment.topCenter,
+                                    child: new TabBar(
+                                      controller: _controller,
+                                      onTap: (index) {
+                                        setState(() {});
+                                      },
+                                      indicatorColor: Colors.black,
+                                      indicatorWeight: 1,
+                                      indicatorSize: TabBarIndicatorSize.label,
+                                      labelColor: Colors.blue[800],
+                                      unselectedLabelColor: Colors.grey[600],
+                                      tabs: [
+                                        Text(
+                                          "General",
+                                          style: TextStyle(
+                                              fontFamily: 'Mukta',
+                                              fontSize: 13.sp,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text("Personal",
+                                            style: TextStyle(
+                                                fontFamily: 'Mukta',
+                                                fontSize: 13.sp,
+                                                fontWeight: FontWeight.bold)),
+                                      ],
                                     ),
-                                    Text("Personal",
-                                        style: TextStyle(
-                                            fontFamily: 'Mukta',
-                                            fontSize: 13.sp,
-                                            fontWeight: FontWeight.w700)),
-                                  ],
-                                ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.center,
+                                    child: Container(
+                                      width: 1,
+                                      height: 7.5.h,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -265,6 +280,9 @@ class _ProfileScreenPageState extends State<ProfileScreen>
                     ),
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 20,
               ),
               new Container(
                 //height: MediaQuery.of(context).size.height/0.9,

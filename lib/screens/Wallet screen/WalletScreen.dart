@@ -80,7 +80,7 @@ class WalletScreenState extends State<WalletScreen> {
                                       color: Colors.white,
                                       fontStyle: FontStyle.normal,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 10.sp)),
+                                      fontSize: 12.sp)),
                             ),
                           ],
                         ),
@@ -397,6 +397,7 @@ class WalletScreenState extends State<WalletScreen> {
                                             MainAxisAlignment.spaceBetween,
                                             children: [
                                               Container(
+
                                                 margin:
                                                 EdgeInsets.only(left: 5.w),
                                                 child: Text('Week',

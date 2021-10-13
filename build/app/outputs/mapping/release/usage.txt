@@ -5491,5 +5491,5 @@ net.nfet.flutter.printing.PrintingJob:
     static final synthetic boolean $assertionsDisabled
 io.flutter.embedding.engine.loader.FlutterLoader$InitResult:
     final java.lang.String dataDirPath
-io.flutter.plugin.platform.PlatformView$-CC
 androidx.lifecycle.DefaultLifecycleObserver$-CC
+io.flutter.plugin.platform.PlatformView$-CC
