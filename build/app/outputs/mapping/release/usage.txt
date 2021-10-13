@@ -1036,16 +1036,16 @@ com.google.common.base.CaseFormat$2
 androidx.fragment.app.FragmentContainer
 com.google.common.collect.Maps$EntrySet
 com.google.errorprone.annotations.concurrent.LockMethod
-android.support.v4.os.ResultReceiver
 androidx.core.app.JobIntentService$JobWorkEnqueuer
+android.support.v4.os.ResultReceiver
 androidx.arch.core.R
 androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 kotlin.coroutines.experimental.jvm.internal.CoroutineIntrinsics
+com.google.common.collect.AbstractMapBasedMultimap$WrappedList$WrappedListIterator
 androidx.lifecycle.LifecycleRegistry:
     public void markState(androidx.lifecycle.Lifecycle$State)
     public void setCurrentState(androidx.lifecycle.Lifecycle$State)
     public int getObserverCount()
-com.google.common.collect.AbstractMapBasedMultimap$WrappedList$WrappedListIterator
 com.google.common.collect.ImmutableBiMap
 com.google.common.util.concurrent.Uninterruptibles:
     public static void awaitUninterruptibly(java.util.concurrent.CountDownLatch)
@@ -5159,8 +5159,8 @@ com.google.common.base.Splitter$4
 androidx.core.view.WindowInsetsCompat
 com.google.common.collect.ConcurrentHashMultiset$1
 androidx.core.text.TextDirectionHeuristicsCompat$TextDirectionAlgorithm
-com.google.common.io.CharSink
 com.google.common.hash.BloomFilter
+com.google.common.io.CharSink
 com.google.common.collect.ImmutableSetMultimap$Builder
 com.google.common.collect.Maps$ViewCachingAbstractMap
 kotlin.sequences.TransformingSequence$iterator$1
@@ -5491,5 +5491,5 @@ net.nfet.flutter.printing.PrintingJob:
     static final synthetic boolean $assertionsDisabled
 io.flutter.embedding.engine.loader.FlutterLoader$InitResult:
     final java.lang.String dataDirPath
-androidx.lifecycle.DefaultLifecycleObserver$-CC
 io.flutter.plugin.platform.PlatformView$-CC
+androidx.lifecycle.DefaultLifecycleObserver$-CC

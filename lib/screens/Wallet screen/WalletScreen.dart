@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:sixteen_digit_project/screens/widgets/start_button.dart';
+import 'package:sixteen_digit_project/screens/Wallet%20screen/scoreHistoryScreen.dart';
 import '../Famcard%20screen/AddMoneyscreen.dart';
 import '../Wallet%20screen/ExpenseRecordscreen.dart';
 import '../Wallet%20screen/PersonalLoanscreen.dart';
@@ -10,26 +10,6 @@ import '../Wallet%20screen/SendMoneyscreen.dart';
 import 'package:sizer/sizer.dart';
 
 import 'Recharge_Paybills.dart';
-
-class DrawTriangle extends CustomPainter {
-  @
-  override
-
-  void paint(Canvas canvas, Size size) {
-    var path = Path();
-    path.moveTo(size.width / 2, 0);
-    path.lineTo(0, size.height);
-    path.lineTo(size.height, size.width);
-    path.close();
-    canvas.drawPath(path, Paint()..color = Colors.white);
-  }
-  @
-  override
-
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return false;
-  }
-}
 
 class WalletScreen extends StatefulWidget {
   @override
@@ -74,7 +54,7 @@ class WalletScreenState extends State<WalletScreen> {
                           children: <Widget>[
                             Container(
 
-                                //margin: EdgeInsets.symmetric(vertical: 0.0, horizontal: 20.0),
+                              //margin: EdgeInsets.symmetric(vertical: 0.0, horizontal: 20.0),
                                 margin: EdgeInsets.fromLTRB(7.w, 5.h, 7.w, 0),
                                 //color: Colors.red,
                                 // width: 100,
@@ -129,7 +109,7 @@ class WalletScreenState extends State<WalletScreen> {
                               alignment: Alignment.topCenter,
                               child: (Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  MainAxisAlignment.spaceBetween,
                                   //crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
                                     Column(
@@ -154,7 +134,7 @@ class WalletScreenState extends State<WalletScreen> {
                                               ),
                                               child: Padding(
                                                 padding:
-                                                    const EdgeInsets.all(2.0),
+                                                const EdgeInsets.all(2.0),
                                                 child: Image.asset(
                                                   "assets/images/pocketmoney.png",
                                                   width: 9.w,
@@ -166,7 +146,7 @@ class WalletScreenState extends State<WalletScreen> {
                                                 context,
                                                 PageTransition(
                                                     type:
-                                                        PageTransitionType.fade,
+                                                    PageTransitionType.fade,
                                                     child: Addmoneyscreen(),
                                                     duration: Duration(
                                                         milliseconds: 800),
@@ -182,12 +162,12 @@ class WalletScreenState extends State<WalletScreen> {
                                               child: Text("Add Money",
                                                   style: TextStyle(
                                                       decoration:
-                                                          TextDecoration.none,
+                                                      TextDecoration.none,
                                                       color: Colors.white,
                                                       fontFamily: 'Muli',
                                                       fontSize: 9.sp,
                                                       fontWeight:
-                                                          FontWeight.w600)),
+                                                      FontWeight.w600)),
                                             ),
                                             //fit: BoxFit.fill,
                                           ),
@@ -216,7 +196,7 @@ class WalletScreenState extends State<WalletScreen> {
                                               ),
                                               child: Padding(
                                                 padding:
-                                                    const EdgeInsets.all(2.0),
+                                                const EdgeInsets.all(2.0),
                                                 child: Image.asset(
                                                   "assets/images/upi_fevicon.png",
                                                   width: 8.w,
@@ -228,7 +208,7 @@ class WalletScreenState extends State<WalletScreen> {
                                                 context,
                                                 PageTransition(
                                                     type:
-                                                        PageTransitionType.fade,
+                                                    PageTransitionType.fade,
                                                     child: SendMoneyscreen(),
                                                     duration: Duration(
                                                         milliseconds: 800),
@@ -245,11 +225,11 @@ class WalletScreenState extends State<WalletScreen> {
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       decoration:
-                                                          TextDecoration.none,
+                                                      TextDecoration.none,
                                                       fontFamily: 'Muli',
                                                       fontSize: 9.sp,
                                                       fontWeight:
-                                                          FontWeight.w600)),
+                                                      FontWeight.w600)),
                                             ),
                                             //fit: BoxFit.fill,
                                           ),
@@ -278,7 +258,7 @@ class WalletScreenState extends State<WalletScreen> {
                                               ),
                                               child: Padding(
                                                 padding:
-                                                    const EdgeInsets.all(2.0),
+                                                const EdgeInsets.all(2.0),
                                                 child: Image.asset(
                                                   "assets/images/bill-pay.png",
                                                   width: 8.w,
@@ -290,13 +270,13 @@ class WalletScreenState extends State<WalletScreen> {
                                                 context,
                                                 PageTransition(
                                                     type:
-                                                        PageTransitionType.fade,
+                                                    PageTransitionType.fade,
                                                     child:
-                                                        RechargePaybillsscreen(),
+                                                    RechargePaybillsscreen(),
                                                     duration:
-                                                        Duration(seconds: 1),
+                                                    Duration(seconds: 1),
                                                     reverseDuration:
-                                                        Duration(seconds: 1)),
+                                                    Duration(seconds: 1)),
                                               );
                                             }),
                                         Container(
@@ -309,7 +289,7 @@ class WalletScreenState extends State<WalletScreen> {
                                                     fontFamily: 'Muli',
                                                     fontSize: 9.sp,
                                                     fontWeight:
-                                                        FontWeight.w600)),
+                                                    FontWeight.w600)),
                                             //fit: BoxFit.fill,
                                           ),
                                         ),
@@ -362,12 +342,12 @@ class WalletScreenState extends State<WalletScreen> {
                                 width: double.infinity, //Your desire Width
                                 child: Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Column(
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                      CrossAxisAlignment.start,
                                       children: [
                                         Container(
                                           child: Text(
@@ -400,7 +380,7 @@ class WalletScreenState extends State<WalletScreen> {
 
                                           decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(2.w),
+                                              BorderRadius.circular(2.w),
                                               // color: Color(0xff002860),
                                               border: Border.all(
                                                   color: Color(0xff002860),
@@ -414,19 +394,19 @@ class WalletScreenState extends State<WalletScreen> {
                                               ]),
                                           child: Row(
                                             mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
+                                            MainAxisAlignment.spaceBetween,
                                             children: [
                                               Container(
                                                 margin:
-                                                    EdgeInsets.only(left: 5.w),
+                                                EdgeInsets.only(left: 5.w),
                                                 child: Text('Week',
                                                     textAlign: TextAlign.center,
                                                     style: TextStyle(
                                                         color: Colors.blue[800],
                                                         fontStyle:
-                                                            FontStyle.normal,
+                                                        FontStyle.normal,
                                                         fontWeight:
-                                                            FontWeight.bold,
+                                                        FontWeight.bold,
                                                         fontSize: 9.sp)),
                                               ),
                                               Icon(
@@ -444,7 +424,7 @@ class WalletScreenState extends State<WalletScreen> {
                                                 type: PageTransitionType.fade,
                                                 curve: Curves.slowMiddle,
                                                 duration:
-                                                    Duration(milliseconds: 800),
+                                                Duration(milliseconds: 800),
                                                 reverseDuration: Duration(
                                                     milliseconds: 800)),
                                           );
@@ -456,7 +436,7 @@ class WalletScreenState extends State<WalletScreen> {
                             Row(
                               children: [
                                 Padding(
-                                  padding:  EdgeInsets.only(left: 4.w),
+                                  padding: EdgeInsets.only(left: 4.w),
                                   child: Text(
                                     "        65%\nFood & Clothing",
                                     style: TextStyle(
@@ -475,8 +455,8 @@ class WalletScreenState extends State<WalletScreen> {
                                           )),
                                     ),
                                     Padding(
-                                      padding:
-                                      EdgeInsets.only(right: 10.w,bottom: 2.h),
+                                      padding: EdgeInsets.only(
+                                          right: 10.w, bottom: 2.h),
                                       child: Text(
                                         "  12% Bills\n    &debt",
                                         style: TextStyle(
@@ -520,7 +500,7 @@ class WalletScreenState extends State<WalletScreen> {
                                   Container(
                                     alignment: Alignment.topLeft,
                                     margin:
-                                        EdgeInsets.fromLTRB(5.w, 2.h, 5.w, 0.5.h),
+                                    EdgeInsets.fromLTRB(5.w, 1.h, 5.w, 1.h),
                                     child: Text(
                                       "Credit Cards",
                                       style: TextStyle(
@@ -546,7 +526,7 @@ class WalletScreenState extends State<WalletScreen> {
                                   Container(
                                       alignment: Alignment.bottomRight,
                                       margin:
-                                          EdgeInsets.fromLTRB(0, 1.h, 2.w, 1.h),
+                                      EdgeInsets.fromLTRB(0, 1.h, 2.w, 1.h),
                                       child: Image.asset(
                                           "assets/images/cradit.png",
                                           width: 15.w)),
@@ -573,7 +553,7 @@ class WalletScreenState extends State<WalletScreen> {
                                       Container(
                                         alignment: Alignment.topLeft,
                                         margin: EdgeInsets.fromLTRB(
-                                            5.w, 1.h, 5.w, 0.5.h),
+                                            5.w, 0.5.h, 5.w, 1.h),
                                         child: Text(
                                           "Micro Loan",
                                           style: TextStyle(
@@ -586,7 +566,7 @@ class WalletScreenState extends State<WalletScreen> {
                                       Container(
                                         alignment: Alignment.topLeft,
                                         margin:
-                                            EdgeInsets.fromLTRB(5.w, 0, 2.w, 0),
+                                        EdgeInsets.fromLTRB(5.w, 0, 2.w, 0),
                                         child: Text(
                                           "Insert small ticket loans to\nmeet your immediate cash\n& needs",
                                           style: TextStyle(
@@ -600,7 +580,7 @@ class WalletScreenState extends State<WalletScreen> {
                                       Container(
                                           alignment: Alignment.bottomRight,
                                           margin:
-                                              EdgeInsets.fromLTRB(0, 5, 20, 10),
+                                          EdgeInsets.fromLTRB(0, 5, 20, 10),
                                           child: Image.asset(
                                               "assets/images/piggi.png",
                                               width: 17.w)),
@@ -616,7 +596,7 @@ class WalletScreenState extends State<WalletScreen> {
                                         curve: Curves.slowMiddle,
                                         duration: Duration(milliseconds: 800),
                                         reverseDuration:
-                                            Duration(milliseconds: 800)),
+                                        Duration(milliseconds: 800)),
                                   );
                                 }),
                           ),
@@ -628,7 +608,7 @@ class WalletScreenState extends State<WalletScreen> {
                         Navigator.push(
                           context,
                           PageTransition(
-                              child: PersonalLoanscreen(),
+                              child: ScoreHistoryScreen(),
                               type: PageTransitionType.fade,
                               curve: Curves.slowMiddle,
                               duration: Duration(milliseconds: 800),
@@ -642,174 +622,129 @@ class WalletScreenState extends State<WalletScreen> {
                         child: Card(
                             elevation: 4,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8),
+                              borderRadius: BorderRadius.circular(2.w),
                             ),
-                            child: Column(
+                            child: Stack(
                               children: [
                                 Container(
+                                  margin: EdgeInsets.symmetric(
+                                      horizontal: 5.w, vertical: 2.h),
                                   //width: 320,
-                                  height: 170,
+                                  height: 20.h,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8),
                                     color: Colors.white,
                                   ),
-                                  child: Row(
+                                  child: Column(
                                     children: [
-                                      Stack(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(26.0),
-                                            child: Container(
-                                              width: 25.w,
-                                              height: 12.h,
-                                              decoration: BoxDecoration(
-                                                color: Colors.grey[100],
-                                                shape: BoxShape.circle,
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    color: Colors.grey.withOpacity(0.2),
-                                                    spreadRadius: 5,
-                                                    blurRadius: 7,
-                                                    offset: Offset(0, 3), // changes position of shadow
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(20.0),
-                                            child: Container(
-                                              margin: EdgeInsets.symmetric(horizontal: 2.w),
-                                              alignment: Alignment.topLeft,
-                                              child: Image.asset(
-                                                'assets/images/meter.png',
-                                                width: 25.w,
-                                              ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(left:50.0,right:56,top:80),
-                                            child: Container(
-                                              child: CustomPaint(size: Size(55, 55), painter: DrawTriangle()),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(43.0),
-                                            child: Container(
-                                              width: 16.w,
-                                              height: 7.h,
-                                              decoration: BoxDecoration(
-                                                color: Colors.white,
-                                                shape: BoxShape.circle,
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    color: Colors.grey.withOpacity(0.1),
-                                                    spreadRadius: 5,
-                                                    blurRadius: 5,
-                                                    offset: Offset(0, 3), // changes position of shadow
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(50.0),
-                                            child: Container(
-                                              width: 13.w,
-                                              height: 4.5.h,
-                                              decoration: BoxDecoration(
-                                                color: Colors.white,
-                                                shape: BoxShape.circle,
-                                                boxShadow: [
-                                                  BoxShadow(
-                                                    color: Colors.grey.withOpacity(0.1),
-                                                    spreadRadius: 5,
-                                                    blurRadius: 5,
-                                                    offset: Offset(0, 3), // changes position of shadow
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Column(
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(left:65.0,top:55),
-                                                child: Text("740",
-                                                    style: TextStyle(
-                                                      fontWeight: FontWeight.bold,
-                                                      color: Colors.grey,
-                                                        fontSize: 12
-                                                    ),
-                                                    ),
-                                              ),
-                                              // Padding(
-                                              //   padding: const EdgeInsets.only(left:60.0,top:8.0),
-                                              //   child: Text("Average Score",
-                                              //       style: TextStyle(
-                                              //         color: Colors.blue,
-                                              //             fontSize: 8
-                                              //       ),
-                                              //       ),
-                                              // ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                      SingleChildScrollView(
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text("CREDIT SCORE",
-                                              style: TextStyle(
-                                                color: Colors.blue,
-                                                fontWeight: FontWeight.bold,
-                                                  fontSize: 17
-                                              ),
-                                            ),
-                                            SizedBox(
-                                                height : 8
-                                            ),
-                                            Text("High score means higher approval\non loans and cards",
-                                              style: TextStyle(
-                                                  color: Colors.blue,
-                                                  fontWeight: FontWeight.normal,
-                                                  fontSize: 10
-                                              ),
-                                            ),
-                                            SizedBox(
-                                                height : 8
-                                            ),
-                                            Text("720/900",
-                                              style: TextStyle(
-                                                  color: Colors.grey,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 30
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(left:70.0,top:8),
-                                              child: Align(
-                                                alignment: FractionalOffset.bottomRight,
-                                                child: FlatButton(
-                                                  onPressed: () {},
-                                                  color: Colors.blue,
-                                                  child: Text("KNOW MORE",
-                                                    style: TextStyle(
-                                                        color: Colors.white,
-                                                        fontWeight: FontWeight.bold,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            )
-
-                                          ],
-                                        ),
-                                      ),
+                                      Image.asset('assets/images/meter (1).png',
+                                          height: 17.h)
                                     ],
                                   ),
                                 ),
+                                Positioned(
+                                    top: 5.h,
+                                    left: 12.w,
+                                    child: CircleAvatar(
+                                      radius: 50,
+                                      backgroundColor:
+                                      Colors.grey.withOpacity(0.08),
+                                      child: Container(
+                                        width: 22.w,
+                                        decoration: BoxDecoration(
+                                            border: Border.all(
+                                                color: Colors.black12,
+                                                width: 2),
+                                            color: Colors.white,
+                                            shape: BoxShape.circle),
+                                        child: Column(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              '740',
+                                              style: TextStyle(
+                                                  fontSize: 14.sp,
+                                                  color: Colors.black54,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            SizedBox(
+                                              height: 1.h,
+                                            ),
+                                            Text('Average Score',
+                                                style: TextStyle(
+                                                    fontSize: 7.sp,
+                                                    fontWeight:
+                                                    FontWeight.bold)),
+                                          ],
+                                        ),
+                                      ),
+                                    )),
+                                Align(
+                                  alignment: Alignment.topRight,
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(
+                                        horizontal: 0.w, vertical: 2.h),
+                                    width: 40.w,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'CREDIT SCORE ',
+                                          style: TextStyle(
+                                              fontSize: 14.sp,
+                                              color: Colors.blue.shade900,
+                                              fontWeight: FontWeight.w900),
+                                        ),
+                                        SizedBox(
+                                          height: 1.h,
+                                        ),
+                                        Text(
+                                            'Hight score means higher approval on loans and cards',
+                                            style: TextStyle(
+                                                height: 1.5,
+                                                color: Colors.blue
+                                                    .withOpacity(0.8),
+                                                fontSize: 8.sp,
+                                                fontWeight: FontWeight.w900)),
+                                        SizedBox(
+                                          height: 2.h,
+                                        ),
+                                        Align(
+                                          alignment: Alignment.topLeft,
+                                          child: Text('740 / 900',
+                                              style: TextStyle(
+                                                  color: Colors.black87
+                                                      .withOpacity(0.7),
+                                                  fontSize: 22.sp,
+                                                  fontWeight: FontWeight.bold)),
+                                        ),
+                                        SizedBox(
+                                          height: 2.h,
+                                        ),
+                                        Container(
+                                          height: 5.h,
+                                          margin: EdgeInsets.symmetric(
+                                              horizontal: 3.w),
+                                          alignment: Alignment.center,
+                                          decoration: BoxDecoration(
+                                              color: Colors.blue.shade900,
+                                              borderRadius: BorderRadius.circular(3.w)),
+                                          child: Text('KNOW MORE',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 12.sp,
+                                                  fontWeight: FontWeight.w500)),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                )
                               ],
                             )),
                       ),
@@ -818,7 +753,7 @@ class WalletScreenState extends State<WalletScreen> {
                     //Complete profile for preapproved offers.
                     Container(
                       margin:
-                          EdgeInsets.symmetric(horizontal: 5.w, vertical: 2.h),
+                      EdgeInsets.symmetric(horizontal: 5.w, vertical: 2.h),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -840,7 +775,7 @@ class WalletScreenState extends State<WalletScreen> {
                                   Container(
                                     alignment: Alignment.topLeft,
                                     margin:
-                                        EdgeInsets.fromLTRB(2.w, 1.h, 1.w, 0),
+                                    EdgeInsets.fromLTRB(2.w, 1.h, 1.w, 0),
                                     child: Text(
                                       "Complete\nProfile for Pre-Approved\nOffers",
                                       style: TextStyle(
@@ -927,27 +862,27 @@ class WalletScreenState extends State<WalletScreen> {
                                               // The containers in the background
                                               ListView(
                                                 physics:
-                                                    NeverScrollableScrollPhysics(),
+                                                NeverScrollableScrollPhysics(),
                                                 children: <Widget>[
                                                   Container(
                                                     alignment:
-                                                        Alignment.topCenter,
+                                                    Alignment.topCenter,
                                                     height: 35.h,
                                                     // color: Colors.blue,
                                                     decoration: BoxDecoration(
                                                         borderRadius:
-                                                            BorderRadius.only(
+                                                        BorderRadius.only(
                                                           topLeft:
-                                                              Radius.circular(
-                                                                  20.0),
+                                                          Radius.circular(
+                                                              20.0),
                                                           topRight:
-                                                              Radius.circular(
-                                                                  20.0),
+                                                          Radius.circular(
+                                                              20.0),
                                                         ),
                                                         gradient:
-                                                            LinearGradient(
+                                                        LinearGradient(
                                                           begin:
-                                                              Alignment.topLeft,
+                                                          Alignment.topLeft,
                                                           end: Alignment
                                                               .topRight,
                                                           colors: <Color>[
@@ -967,11 +902,11 @@ class WalletScreenState extends State<WalletScreen> {
                                                               Expanded(
                                                                 child: Column(
                                                                   mainAxisAlignment:
-                                                                      MainAxisAlignment
-                                                                          .center,
+                                                                  MainAxisAlignment
+                                                                      .center,
                                                                   crossAxisAlignment:
-                                                                      CrossAxisAlignment
-                                                                          .start,
+                                                                  CrossAxisAlignment
+                                                                      .start,
                                                                   children: <
                                                                       Widget>[
                                                                     Container(
@@ -981,11 +916,11 @@ class WalletScreenState extends State<WalletScreen> {
                                                                           7.w,
                                                                           0),
                                                                       child:
-                                                                          Text(
+                                                                      Text(
                                                                         "Cashback for you &\nyour friend",
                                                                         style: TextStyle(
                                                                             color:
-                                                                                Colors.white,
+                                                                            Colors.white,
                                                                             fontStyle: FontStyle.normal,
                                                                             fontWeight: FontWeight.normal,
                                                                             fontSize: 17.sp),
@@ -998,11 +933,11 @@ class WalletScreenState extends State<WalletScreen> {
                                                                           7.w,
                                                                           0),
                                                                       child:
-                                                                          Text(
+                                                                      Text(
                                                                         "You and your referral earns\nmoney when your referral\npays on 16 digit",
                                                                         style: TextStyle(
                                                                             color:
-                                                                                Colors.grey[400],
+                                                                            Colors.grey[400],
                                                                             fontStyle: FontStyle.normal,
                                                                             fontWeight: FontWeight.normal,
                                                                             fontSize: 10.sp),
@@ -1014,10 +949,10 @@ class WalletScreenState extends State<WalletScreen> {
                                                               Container(
                                                                   margin: EdgeInsets
                                                                       .fromLTRB(
-                                                                          7.w,
-                                                                          2.h,
-                                                                          7.w,
-                                                                          0),
+                                                                      7.w,
+                                                                      2.h,
+                                                                      7.w,
+                                                                      0),
                                                                   child: Image.asset(
                                                                       "assets/images/cashback.png",
                                                                       width: 30
@@ -1027,35 +962,35 @@ class WalletScreenState extends State<WalletScreen> {
                                                         ),
                                                         Container(
                                                           alignment:
-                                                              Alignment.center,
+                                                          Alignment.center,
                                                           margin: EdgeInsets
                                                               .symmetric(
-                                                                  horizontal:
-                                                                      20.w,
-                                                                  vertical:
-                                                                      3.h),
+                                                              horizontal:
+                                                              20.w,
+                                                              vertical:
+                                                              3.h),
                                                           height: 6.h,
                                                           //width: double.infinity,
                                                           width: 50.w,
                                                           decoration:
-                                                              BoxDecoration(
+                                                          BoxDecoration(
                                                             color: Colors.white,
                                                             // color: const Color.fromARGB(255, 253, 188, 51),
                                                             borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        20),
+                                                            BorderRadius
+                                                                .circular(
+                                                                20),
                                                           ),
 
                                                           child: Row(
                                                             mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
+                                                            MainAxisAlignment
+                                                                .center,
                                                             children: [
                                                               Container(
                                                                 margin:
-                                                                    EdgeInsets
-                                                                        .only(
+                                                                EdgeInsets
+                                                                    .only(
                                                                   left: 0,
                                                                   top: 0,
                                                                   right: 7.w,
@@ -1065,10 +1000,10 @@ class WalletScreenState extends State<WalletScreen> {
                                                                   'Track Status',
                                                                   style: TextStyle(
                                                                       color: Colors
-                                                                              .blue[
-                                                                          400],
+                                                                          .blue[
+                                                                      400],
                                                                       fontSize:
-                                                                          12.sp),
+                                                                      12.sp),
                                                                 ),
                                                               ),
                                                               Image.asset(
@@ -1098,25 +1033,25 @@ class WalletScreenState extends State<WalletScreen> {
                                                 child: Container(
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                        BorderRadius.only(
+                                                    BorderRadius.only(
                                                       topLeft:
-                                                          Radius.circular(20.0),
+                                                      Radius.circular(20.0),
                                                       topRight:
-                                                          Radius.circular(20.0),
+                                                      Radius.circular(20.0),
                                                     ),
                                                     color: Colors.white,
                                                   ),
                                                   child: Container(
                                                     width: double.infinity,
                                                     margin:
-                                                        EdgeInsets.symmetric(
-                                                            horizontal: 2.w,
-                                                            vertical: 5.h),
+                                                    EdgeInsets.symmetric(
+                                                        horizontal: 2.w,
+                                                        vertical: 5.h),
                                                     // height: 400,
                                                     decoration: BoxDecoration(
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                              40),
+                                                      BorderRadius.circular(
+                                                          40),
                                                       // color: Color(0xfff2f2f2),
                                                       color: Colors.white,
                                                     ),
@@ -1124,20 +1059,20 @@ class WalletScreenState extends State<WalletScreen> {
                                                       children: [
                                                         Container(
                                                           width:
-                                                              double.infinity,
+                                                          double.infinity,
                                                           height: 7.h,
                                                           padding:
-                                                              EdgeInsets.all(
-                                                                  0.0),
+                                                          EdgeInsets.all(
+                                                              0.0),
                                                           decoration:
-                                                              BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              40),
-                                                                  // color: Color(0xff0f2f2f2),
-                                                                  color: Colors
-                                                                      .white),
+                                                          BoxDecoration(
+                                                              borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                  40),
+                                                              // color: Color(0xff0f2f2f2),
+                                                              color: Colors
+                                                                  .white),
                                                           child: Column(
                                                             children: [
                                                               Container(
@@ -1149,19 +1084,19 @@ class WalletScreenState extends State<WalletScreen> {
                                                                             horizontal: 5
                                                                                 .w),
                                                                         alignment:
-                                                                            Alignment
-                                                                                .center,
+                                                                        Alignment
+                                                                            .center,
                                                                         child: Image
                                                                             .asset(
                                                                           "assets/images/whatapp.png",
                                                                           width:
-                                                                              10.w,
+                                                                          10.w,
                                                                         )),
                                                                     Text(
                                                                         'Whatsapp',
                                                                         style: TextStyle(
                                                                             color:
-                                                                                Colors.grey,
+                                                                            Colors.grey,
                                                                             fontStyle: FontStyle.normal,
                                                                             fontWeight: FontWeight.bold,
                                                                             fontSize: 12.sp)),
@@ -1173,20 +1108,20 @@ class WalletScreenState extends State<WalletScreen> {
                                                         ),
                                                         Container(
                                                           width:
-                                                              double.infinity,
+                                                          double.infinity,
                                                           height: 7.h,
                                                           padding:
-                                                              EdgeInsets.all(
-                                                                  0.0),
+                                                          EdgeInsets.all(
+                                                              0.0),
                                                           decoration:
-                                                              BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              40),
-                                                                  // color: Color(0xff0f2f2f2),
-                                                                  color: Colors
-                                                                      .white),
+                                                          BoxDecoration(
+                                                              borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                  40),
+                                                              // color: Color(0xff0f2f2f2),
+                                                              color: Colors
+                                                                  .white),
                                                           child: Column(
                                                             children: [
                                                               Container(
@@ -1198,19 +1133,19 @@ class WalletScreenState extends State<WalletScreen> {
                                                                             horizontal: 5
                                                                                 .w),
                                                                         alignment:
-                                                                            Alignment
-                                                                                .center,
+                                                                        Alignment
+                                                                            .center,
                                                                         child: Image
                                                                             .asset(
                                                                           "assets/images/telegram.png",
                                                                           width:
-                                                                              10.w,
+                                                                          10.w,
                                                                         )),
                                                                     Text(
                                                                         'telegram',
                                                                         style: TextStyle(
                                                                             color:
-                                                                                Colors.grey,
+                                                                            Colors.grey,
                                                                             fontStyle: FontStyle.normal,
                                                                             fontWeight: FontWeight.bold,
                                                                             fontSize: 12.sp)),
@@ -1222,20 +1157,20 @@ class WalletScreenState extends State<WalletScreen> {
                                                         ),
                                                         Container(
                                                           width:
-                                                              double.infinity,
+                                                          double.infinity,
                                                           height: 7.h,
                                                           padding:
-                                                              EdgeInsets.all(
-                                                                  0.0),
+                                                          EdgeInsets.all(
+                                                              0.0),
                                                           decoration:
-                                                              BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              40),
-                                                                  // color: Color(0xff0f2f2f2),
-                                                                  color: Colors
-                                                                      .white),
+                                                          BoxDecoration(
+                                                              borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                  40),
+                                                              // color: Color(0xff0f2f2f2),
+                                                              color: Colors
+                                                                  .white),
                                                           child: Column(
                                                             children: [
                                                               Container(
@@ -1247,19 +1182,19 @@ class WalletScreenState extends State<WalletScreen> {
                                                                             horizontal: 5
                                                                                 .w),
                                                                         alignment:
-                                                                            Alignment
-                                                                                .center,
+                                                                        Alignment
+                                                                            .center,
                                                                         child: Image
                                                                             .asset(
                                                                           "assets/images/instagram.png",
                                                                           width:
-                                                                              10.w,
+                                                                          10.w,
                                                                         )),
                                                                     Text(
                                                                         'instagram',
                                                                         style: TextStyle(
                                                                             color:
-                                                                                Colors.grey,
+                                                                            Colors.grey,
                                                                             fontStyle: FontStyle.normal,
                                                                             fontWeight: FontWeight.bold,
                                                                             fontSize: 12.sp)),
@@ -1271,20 +1206,20 @@ class WalletScreenState extends State<WalletScreen> {
                                                         ),
                                                         Container(
                                                           width:
-                                                              double.infinity,
+                                                          double.infinity,
                                                           height: 7.h,
                                                           padding:
-                                                              EdgeInsets.all(
-                                                                  0.0),
+                                                          EdgeInsets.all(
+                                                              0.0),
                                                           decoration:
-                                                              BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              40),
-                                                                  // color: Color(0xff0f2f2f2),
-                                                                  color: Colors
-                                                                      .white),
+                                                          BoxDecoration(
+                                                              borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                  40),
+                                                              // color: Color(0xff0f2f2f2),
+                                                              color: Colors
+                                                                  .white),
                                                           child: Column(
                                                             children: [
                                                               Container(
@@ -1296,19 +1231,19 @@ class WalletScreenState extends State<WalletScreen> {
                                                                             horizontal: 5
                                                                                 .w),
                                                                         alignment:
-                                                                            Alignment
-                                                                                .center,
+                                                                        Alignment
+                                                                            .center,
                                                                         child: Image
                                                                             .asset(
                                                                           "assets/images/facebook.png",
                                                                           width:
-                                                                              10.w,
+                                                                          10.w,
                                                                         )),
                                                                     Text(
                                                                         'facebook',
                                                                         style: TextStyle(
                                                                             color:
-                                                                                Colors.grey,
+                                                                            Colors.grey,
                                                                             fontStyle: FontStyle.normal,
                                                                             fontWeight: FontWeight.bold,
                                                                             fontSize: 12.sp)),
@@ -1354,7 +1289,7 @@ class WalletScreenState extends State<WalletScreen> {
                                 ),
                                 child: Container(
                                   margin:
-                                      EdgeInsets.fromLTRB(5.w, 2.h, 5.w, 1.h),
+                                  EdgeInsets.fromLTRB(5.w, 2.h, 5.w, 1.h),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.all(
                                       Radius.circular(2.w),
@@ -1363,13 +1298,13 @@ class WalletScreenState extends State<WalletScreen> {
                                   width: double.infinity, //Your desire Width
                                   child: Row(
                                     mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
                                           Container(
                                             child: Text(
@@ -1402,7 +1337,7 @@ class WalletScreenState extends State<WalletScreen> {
 
                                             decoration: BoxDecoration(
                                                 borderRadius:
-                                                    BorderRadius.circular(2.w),
+                                                BorderRadius.circular(2.w),
                                                 // color: Color(0xff002860),
                                                 border: Border.all(
                                                     color: Color(0xff002860),
@@ -1422,11 +1357,11 @@ class WalletScreenState extends State<WalletScreen> {
                                                   child: Text('Month',
                                                       style: TextStyle(
                                                           color:
-                                                              Colors.blue[800],
+                                                          Colors.blue[800],
                                                           fontStyle:
-                                                              FontStyle.normal,
+                                                          FontStyle.normal,
                                                           fontWeight:
-                                                              FontWeight.bold,
+                                                          FontWeight.bold,
                                                           fontSize: 8.sp)),
                                                 ),
                                                 Icon(
@@ -1456,7 +1391,7 @@ class WalletScreenState extends State<WalletScreen> {
                               Row(
                                 children: [
                                   Padding(
-                                    padding:  EdgeInsets.only(left: 4.w),
+                                    padding: EdgeInsets.only(left: 4.w),
                                     child: Text(
                                       "        65%\nFood & Clothing",
                                       style: TextStyle(
@@ -1475,8 +1410,8 @@ class WalletScreenState extends State<WalletScreen> {
                                             )),
                                       ),
                                       Padding(
-                                        padding:
-                                        EdgeInsets.only(right: 10.w,bottom: 2.h),
+                                        padding: EdgeInsets.only(
+                                            right: 10.w, bottom: 2.h),
                                         child: Text(
                                           "  12% Bills\n    &debt",
                                           style: TextStyle(
@@ -1541,7 +1476,7 @@ class WalletScreenState extends State<WalletScreen> {
                                 width: double.infinity,
                                 child: GridView.count(
                                     padding:
-                                        EdgeInsets.symmetric(vertical: 3.h),
+                                    EdgeInsets.symmetric(vertical: 3.h),
                                     crossAxisCount: 3,
                                     childAspectRatio: (4 / 3),
                                     shrinkWrap: true,
@@ -1549,10 +1484,10 @@ class WalletScreenState extends State<WalletScreen> {
                                     mainAxisSpacing: 10,
                                     physics: NeverScrollableScrollPhysics(),
                                     children:
-                                        List.generate(choices.length, (index) {
+                                    List.generate(choices.length, (index) {
                                       return Center(
                                         child:
-                                            SelectCard(choice: choices[index]),
+                                        SelectCard(choice: choices[index]),
                                       );
                                     })),
                               ),
@@ -1572,7 +1507,7 @@ class WalletScreenState extends State<WalletScreen> {
                                 width: double.infinity,
                                 child: GridView.count(
                                     padding:
-                                        EdgeInsets.symmetric(vertical: 3.h),
+                                    EdgeInsets.symmetric(vertical: 3.h),
                                     crossAxisCount: 3,
                                     shrinkWrap: true,
                                     childAspectRatio: (4 / 3),
@@ -1580,7 +1515,7 @@ class WalletScreenState extends State<WalletScreen> {
                                     // mainAxisSpacing: 10,
                                     physics: NeverScrollableScrollPhysics(),
                                     children:
-                                        List.generate(choices2.length, (index) {
+                                    List.generate(choices2.length, (index) {
                                       return Center(
                                         child: SelectCard2(
                                             choice2: choices2[index]),
@@ -1603,7 +1538,7 @@ class WalletScreenState extends State<WalletScreen> {
                                 width: double.infinity,
                                 child: GridView.count(
                                     padding:
-                                        EdgeInsets.only(top: 3.h, bottom: 2.h),
+                                    EdgeInsets.only(top: 3.h, bottom: 2.h),
                                     crossAxisCount: 3,
                                     shrinkWrap: true,
                                     childAspectRatio: (4 / 3),
@@ -1611,7 +1546,7 @@ class WalletScreenState extends State<WalletScreen> {
                                     mainAxisSpacing: 10,
                                     physics: NeverScrollableScrollPhysics(),
                                     children:
-                                        List.generate(choices3.length, (index) {
+                                    List.generate(choices3.length, (index) {
                                       return Center(
                                         child: SelectCard3(
                                             choice3: choices3[index]),
@@ -1635,7 +1570,7 @@ class WalletScreenState extends State<WalletScreen> {
                                 width: double.infinity,
                                 child: GridView.count(
                                     padding:
-                                        EdgeInsets.only(top: 2.h, bottom: 2.h),
+                                    EdgeInsets.only(top: 2.h, bottom: 2.h),
                                     crossAxisCount: 3,
                                     shrinkWrap: true,
                                     childAspectRatio: (4 / 3),
@@ -1643,7 +1578,7 @@ class WalletScreenState extends State<WalletScreen> {
                                     mainAxisSpacing: 10,
                                     physics: NeverScrollableScrollPhysics(),
                                     children:
-                                        List.generate(choice4.length, (index) {
+                                    List.generate(choice4.length, (index) {
                                       return Center(
                                         child: SelectCard4(
                                             choice4: choice4[index]),
@@ -1673,7 +1608,7 @@ class WalletScreenState extends State<WalletScreen> {
                                     //mainAxisSpacing: 10,
                                     physics: NeverScrollableScrollPhysics(),
                                     children:
-                                        List.generate(choices5.length, (index) {
+                                    List.generate(choices5.length, (index) {
                                       return Center(
                                         child: SelectCard5(
                                             choice5: choices5[index]),
